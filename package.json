@@ -1,0 +1,36 @@
+{
+  "name": "chukta",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "db:migrate": "node scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "ai": "^5.0.60",
+    "bcryptjs": "^3.0.2",
+    "jose": "^6.1.0",
+    "next": "^15.5.4",
+    "papaparse": "^5.5.3",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.8",
+    "@types/papaparse": "^5.3.16",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.1.17",
+    "@types/react-dom": "^19.1.11",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,4 @@
+invoice_no,buyer_name,amount,issue_date,due_date,buyer_phone,buyer_email,buyer_language,relationship
+INV-1001,Gupta Distributors,"48,500",01/09/2026,01/10/2026,9876543210,accounts@example.com,hinglish,regular
+INV-1002,Reliable Auto Parts,"1,25,000",15/08/2026,14/09/2026,9876500000,,en,key
+INV-1003,New Age Retail,9800,2026-10-10,2026-10-24,,purchase@example.com,en,new
