@@ -14,6 +14,7 @@ export default async function Home() {
       </p>
       <div className="row" style={{ marginTop: 20 }}>
         <Link className="btn primary" href="/signup">Start free</Link>
+        <Link className="btn" href="/tour">Watch the 60-second tour</Link>
         <Link className="btn" href="/login">Log in</Link>
       </div>
       <ul className="muted small" style={{ marginTop: 32 }}>

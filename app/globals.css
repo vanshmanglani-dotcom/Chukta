@@ -103,3 +103,30 @@ th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: upp
 .pay { max-width: 480px; margin: 4vh auto; padding: 0 16px; }
 .qr { display: block; margin: 12px auto; width: 220px; height: 220px; background: #fff; padding: 8px; border-radius: 8px; }
 details summary { cursor: pointer; color: var(--muted); }
+
+/* Product tour */
+.tour { max-width: 1080px; margin: 0 auto; padding: 16px 16px 48px; }
+.tour-progress { display: flex; gap: 4px; margin-bottom: 20px; }
+.tour-progress .seg { flex: 1; height: 4px; border-radius: 4px; background: var(--border); overflow: hidden; position: relative; }
+.tour-progress .seg.done { background: var(--brand); }
+.tour-progress .seg i { position: absolute; inset: 0; background: var(--brand); transform-origin: left; animation: tourfill linear forwards; }
+@keyframes tourfill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.tour-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 20px; align-items: start; }
+@media (max-width: 760px) { .tour-grid { grid-template-columns: 1fr; } }
+.tour-caption h1 { font-size: 1.6rem; line-height: 1.25; margin-bottom: 8px; }
+.tour-screen { min-height: 320px; animation: fadein .35s both; }
+.tour-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.bubble { background: var(--brand-soft); border-radius: 12px 12px 12px 2px; padding: 12px 14px; white-space: pre-wrap; min-height: 80px; }
+.bubble.bad { background: var(--danger-soft); }
+.caret { display: inline-block; width: 2px; height: 1em; background: var(--text); vertical-align: text-bottom; margin-left: 1px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.phone { border: 1px solid var(--border); border-radius: 18px; padding: 10px; min-height: 220px; background: var(--bg); }
+.phone-top { font-weight: 600; font-size: 13px; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
+.wa { background: #d9fdd3; color: #111; border-radius: 10px 10px 2px 10px; padding: 8px 10px; font-size: 13px; margin-left: 20%; animation: fadein .35s both; }
+.wa .link { color: #027eb5; text-decoration: underline; }
+.paymock { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--bg); }
+.pressed { outline: 3px solid var(--brand-soft); transform: scale(.97); transition: transform .15s; }
+@media (prefers-reduced-motion: reduce) {
+  .tour-progress .seg i, .tour-screen, .wa, .caret { animation: none; }
+}
